@@ -1,4 +1,4 @@
 # sunnys-framework
 a project framework for sunny's
 
-[View Site](https://github.com/catriveros/sunnys-framework)
+[View Site](https://catriveros.github.io/sunnys-framework)
