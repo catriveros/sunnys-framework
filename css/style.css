@@ -687,11 +687,50 @@ section {
 
 
 
+
+
+
+
+
+
+
 /* ------------------- */
 /* -- ANIMATION -- */
 /* ------------------- */
 
-/* ADD SUPPORT FOR SMOOTH SCROLLING */
+/* ENABLE NATIVE SMOOTH SCROLLING */
 html {
     scroll-behavior: smooth;
 }
+
+/* ONSCROLL TRIGGERED ANIMATION */
+.observe-me {
+    opacity: 0;
+    transition: all 1s ease-out .5s;
+    
+    &[data-viewstate="active"] {
+        opacity: 1;
+    }
+
+}
+
+.animate-from-left {
+    translate: -20px 20px;
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+.animate-from-right {
+    translate: 20px 20px;
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+
+
+
+
+
+
+
