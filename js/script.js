@@ -16,6 +16,22 @@ toggleMenuButton.onclick = function() {
 const toggleMenuLinks = document.querySelectorAll('.toggle-menu a');
 toggleMenuLinks.forEach((el) => {
   
-    toggleMenu.setAttribute('data-menustate','closed');
-  
+    toggleMenu.setAttribute('data-menustate','closed'); 
   });
+
+  //ON SCROLL ANIMATION//
+  // CHANGE ACTIVE STATE FOR ALL TARGET ELEMENTS WITH .observe-me CLASS
+const myobserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.setAttribute("data-viewstate", "active");
+    } else {
+      entry.target.setAttribute("data-viewstate", "innactive");
+    };   
+  });  
+});
+
+const mytargets = document.querySelectorAll('.observe-me');
+mytargets.forEach((el) => {
+    myobserver.observe(el);
+});
