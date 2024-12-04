@@ -50,7 +50,7 @@ CSS TABLE OF CONTENTS
 :root {
 
     /* DEFINE ALL COMMONLY USED COLORS HERE */
-    --color-body-background: rgb(255 255 255);
+    --color-body-background: #F3EDE7;
     --color-text-body: rgb(0 0 0 / .8);
     --color-text-headings: rgb(0 0 0 / 1);
 
@@ -59,10 +59,10 @@ CSS TABLE OF CONTENTS
     --color-links-light: rgb(204 204 204);
     --color-links-lighter: rgb(255 255 255);
 
-    --color-siteheader-background: rgb(135, 135, 135);
+    --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
 
-    --color-hero-background: rgb(100 100 100);
+    --color-hero-background: transparent;
     --color-hero-text: rgb(255 255 255 / .8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
@@ -76,7 +76,7 @@ CSS TABLE OF CONTENTS
     --font-headings: system-ui, Helvetica, Arial, sans-serif;
 
     /* SIZING UNITS */
-    --container-width: 1100px;
+    --container-width: 1200px;
     --unit-small: 1em;
     --unit-medium: 2em;
     --unit-large: 4em;
@@ -87,10 +87,14 @@ CSS TABLE OF CONTENTS
 /* GLOBAL RESET */
 
 /* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 /* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
-body { margin: 0; }
+body {
+    margin: 0;
+}
 
 /* GLOBAL COLORS */
 body {
@@ -104,8 +108,16 @@ body {
 }
 
 /* SET THE COLOR OF ALL HEADINGS H1-etc */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--color-text-headings);
+
+
+}
+
+h1 {
+    text-align: center;
 }
 
 a {
@@ -132,9 +144,15 @@ body {
 }
 
 /* SET THE FONT FAMILY AND MARGINS FOR ALL HEADINGS */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-headings);
     margin: .4em 0;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 /* SET H1 FONT SIZE AND LEADING */
@@ -156,11 +174,13 @@ h3 {
 }
 
 p {
+
+
     /* LIMIT THE WIDTH OF ALL PARAGRAPHS */
-    max-width: 65ch;
+    /* max-width: 65ch; */
 
     /* NEW SCHOOL WIDOW SLAYER */
-    text-wrap: pretty;
+    /* text-wrap: pretty; */
 
 }
 
@@ -169,7 +189,7 @@ p {
 /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
 img {
     max-width: 100%;
-    height: auto; 
+    height: auto;
 }
 
 /* GLOBAL HELPERS */
@@ -199,14 +219,14 @@ img {
 /* SMALL SCREENS (Mobile < 768px) */
 body {
     /* SET THE DEFAULT FONT SIZE TO 14px */
-    font-size: 87.5%; 
+    font-size: 87.5%;
 }
 
 /* MEDIUM SCREENS (Tablets < 1200px) */
 @media (min-width: 768px) {
     body {
         /* SET THE MEDIUM SCREENS AND HIGHER FONT SIZE TO 16px */
-        font-size: 100%; 
+        font-size: 100%;
     }
 }
 
@@ -214,9 +234,10 @@ body {
 @media (min-width: 1200px) {
     body {
         /* SET THE LARGE SCREENS AND HIGHER FONT SIZE TO 18px */
-        font-size: 112.5%; 
+        font-size: 112.5%;
     }
 }
+
 
 /* CONTAINER */
 .container {
@@ -226,6 +247,8 @@ body {
     /* CENTER THE CONTAINER HORIZONTALLY*/
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid rgb(0, 255, 123);
+
 }
 
 /* GRID */
@@ -233,7 +256,7 @@ body {
     --gridgap: 2em;
 }
 
-.row > * {
+.row>* {
     margin-top: var(--gridgap);
     margin-bottom: var(--gridgap);
 }
@@ -246,52 +269,150 @@ body {
     }
 
     /* COMMONLY USED SEMANTIC COLUMN WIDTHS */
-    .one-half { grid-column: auto / span 6; }
-    .one-third { grid-column: auto / span 4; }
-    .two-thirds { grid-column: auto / span 8; }
-    .one-fourth { grid-column: auto / span 3; }
-    .three-fourths { grid-column: auto / span 9; }
+    .one-whole {
+        grid-column: span 12
+    }
+
+    .one-half {
+        grid-column: auto / span 6;
+    }
+
+    .one-third {
+        grid-column: auto / span 4;
+    }
+
+    .two-thirds {
+        grid-column: auto / span 8;
+    }
+
+    .one-fourth {
+        grid-column: auto / span 3;
+    }
+
+    .three-fourths {
+        grid-column: auto / span 9;
+    }
 
     /* 12 COLUMN CLASSES */
-    .col-1 { grid-column: auto / span 1; }
-    .col-2 { grid-column: auto / span 2; }
-    .col-3 { grid-column: auto / span 3; }
-    .col-4 { grid-column: auto / span 4; }
-    .col-5 { grid-column: auto / span 5; }
-    .col-6 { grid-column: auto / span 6; }
-    .col-7 { grid-column: auto / span 7; }
-    .col-8 { grid-column: auto / span 8; }
-    .col-9 { grid-column: auto / span 9; }
-    .col-10 { grid-column: auto / span 10; }
-    .col-11 { grid-column: auto / span 11; }
-    .col-12 { grid-column: auto / span 12; }
+    .col-1 {
+        grid-column: auto / span 1;
+    }
+
+    .col-2 {
+        grid-column: auto / span 2;
+    }
+
+    .col-3 {
+        grid-column: auto / span 3;
+    }
+
+    .col-4 {
+        grid-column: auto / span 4;
+    }
+
+    .col-5 {
+        grid-column: auto / span 5;
+    }
+
+    .col-6 {
+        grid-column: auto / span 6;
+    }
+
+    .col-7 {
+        grid-column: auto / span 7;
+    }
+
+    .col-8 {
+        grid-column: auto / span 8;
+    }
+
+    .col-9 {
+        grid-column: auto / span 9;
+    }
+
+    .col-10 {
+        grid-column: auto / span 10;
+    }
+
+    .col-11 {
+        grid-column: auto / span 11;
+    }
+
+    .col-12 {
+        grid-column: auto / span 12;
+    }
 
     /* COMMONLY CENTERED COLUMNS */
-    .one-half.centered { grid-column: 4 / span 6; }
-    .one-third.centered { grid-column: 5 / span 4; }
-    .two-thirds.centered { grid-column: 3 / span 8; }
+    .one-half.centered {
+        grid-column: 4 / span 6;
+    }
+
+    .one-third.centered {
+        grid-column: 5 / span 4;
+    }
+
+    .two-thirds.centered {
+        grid-column: 3 / span 8;
+    }
 
     /* PUSHES */
-    .push-1 { grid-column-start: 2; }
-    .push-2 { grid-column-start: 3; }
-    .push-3 { grid-column-start: 4; }
-    .push-4 { grid-column-start: 5; }
-    .push-5 { grid-column-start: 6; }
-    .push-6 { grid-column-start: 7; }
-    .push-7 { grid-column-start: 8; }
-    .push-8 { grid-column-start: 9; }
-    .push-9 { grid-column-start: 10; }
-    .push-10 { grid-column-start: 11; }
-    .push-11 { grid-column-start: 12; }
+    .push-1 {
+        grid-column-start: 2;
+    }
+
+    .push-2 {
+        grid-column-start: 3;
+    }
+
+    .push-3 {
+        grid-column-start: 4;
+    }
+
+    .push-4 {
+        grid-column-start: 5;
+    }
+
+    .push-5 {
+        grid-column-start: 6;
+    }
+
+    .push-6 {
+        grid-column-start: 7;
+    }
+
+    .push-7 {
+        grid-column-start: 8;
+    }
+
+    .push-8 {
+        grid-column-start: 9;
+    }
+
+    .push-9 {
+        grid-column-start: 10;
+    }
+
+    .push-10 {
+        grid-column-start: 11;
+    }
+
+    .push-11 {
+        grid-column-start: 12;
+    }
 
     /* SWAP (REVERSE) COLUMNS - WORKS ONLY w/ 2 CHILDREN  */
-    .row.swapped > *:first-child { order: 2; }
-    .row.swapped > *:last-child { order: 1; }
+    .row.swapped>*:first-child {
+        order: 2;
+    }
+
+    .row.swapped>*:last-child {
+        order: 1;
+    }
 
 }
 
 /* FOR DEMO PURPOSES */
-.demo > * {
+.demo>* {
     background-color: #444;
     padding: 1em;
     text-align: center;
@@ -305,7 +426,7 @@ body {
 /* SITE HEADER */
 .site-header {
     background-color: var(--color-siteheader-background);
-    
+
     /* PUT ALL HEADER CHILDREN SIDE-BY-SIDE AND VERT CENTERED ON LARGE SCREENS */
     @media (min-width: 768px) {
         display: flex;
@@ -336,7 +457,7 @@ body {
         justify-content: center;
         gap: 1em;*/
 
-        
+
 
         /* REMOVE MARGINS AND RESIZE H1 INSIDE HEADER */
         h1 {
@@ -345,7 +466,15 @@ body {
             text-wrap: nowrap;
         }
 
-    
+
+
+
+
+
+
+
+
+
 
     }
 
@@ -368,7 +497,7 @@ body {
             display: block;
             padding: 1em;
         }
-    
+
     }
 
 }
@@ -404,13 +533,13 @@ body {
 
         /* RESET BUTTON FONT SIZE TO SAME AS SITE HEADER NAV */
         font-size: inherit;
-        
+
         &:hover {
             cursor: pointer;
         }
 
         &:has(svg) {
-            
+
             /* VERTICALLY ALIGN AND ADD GAP */
             display: flex;
             align-items: center;
@@ -425,26 +554,26 @@ body {
             }
 
             /* ADD SUPPORT FOR NAVICON / HAMBURGER ICON */
-        &:has(svg) {
+            &:has(svg) {
 
-            /* VERTICALLY ALIGN THE MENU TEXT W ICON */
-            display: flex;
-            align-content: center;
-            gap: var(--unit-small);
+                /* VERTICALLY ALIGN THE MENU TEXT W ICON */
+                display: flex;
+                align-content: center;
+                gap: var(--unit-small);
 
-            /* REMOVE BORDER */
-            border: none;
+                /* REMOVE BORDER */
+                border: none;
 
-            /* SET THE COLOR OF THE SVG TO MATCH */
-            svg {
-                fill: var(--color-siteheader-links);
+                /* SET THE COLOR OF THE SVG TO MATCH */
+                svg {
+                    fill: var(--color-siteheader-links);
+                }
+
             }
-
-        }
 
 
             /* ADD SUPPORT FOR SVG ANIMATION */
-            svg > * {
+            svg>* {
                 transition: .2s all ease-out;
                 transform-origin: center;
             }
@@ -484,33 +613,35 @@ body {
             z-index: 100;
         }
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
         /* SHOW THE SITE MENU WHEN OPEN */
         .site-menu {
             transform: translateX(0);
         }
 
         /* ANIMATE THE NAVICON / HAMBURGER ICON TO AN X */
-       .site-menu-button svg {
-           
+        .site-menu-button svg {
+
             .simple-navicon-top {
-                 rotate: 45deg;
-                 translate: -21% 25%;
+                rotate: 45deg;
+                translate: -21% 25%;
             }
+
             .simple-navicon-middle {
                 opacity: 0;
             }
+
             .simple-navicon-bottom {
                 transform: translate(-21%, -25%) rotate(-45deg);
             }
@@ -549,12 +680,13 @@ body {
 
     /* SET SITE HEADER LINK COLOR ON LARGE SCREENS */
     --color-siteheader-links: var(--color-hero-headings);
+
     a {
         color: var(--color-siteheader-links);
     }
 
     /* ADD MORE SPACE ON TOP FOR THE ABSOLUTE HEADER */
-    & + .site-main > .hero {
+    &+.site-main>.hero {
         padding-top: calc(4em + var(--unit-large));
     }
 
@@ -562,8 +694,7 @@ body {
 
 
 /* SITE MAIN */
-.site-main {
-}
+.site-main {}
 
 /* SECTIONS */
 section {
@@ -576,16 +707,164 @@ section {
     background-color: var(--color-hero-background);
     color: var(--color-hero-text);
 
+
     h1 {
         font-size: 4em;
         line-height: 1;
         text-wrap: balance;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
         color: var(--color-hero-headings);
     }
 
+
+
+}
+
+
+/* CUSTOM STYLING */
+
+/* INTRO */
+
+
+.intro {
+    text-align: center;
+}
+
+
+
+/* RESERVATION FORM */
+
+label,
+input {
+    display: block;
+
+}
+
+.reservation-form {
+    padding: 3em 1em;
+    background-color: rgb(218, 142, 117);
+
+    p {
+        text-align: center;
+
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+}
+
+
+/* FRESH & SEASONAL */
+
+.fresh {
+    text-align: center;
+
+}
+
+.fresh p {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 1em 2em 2em;
+    font-size: 20pt;
+    font-family: domine;
+
+
+    ;
+}
+
+
+/* MISSION */
+
+.mission {
+    text-align: center;
+
+}
+
+
+.mission p {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 1em 2em 2em;
+    font-size: 20pt;
+    font-family: domine;
+
+
+    ;
+}
+
+.customgrid1 {
+    /* background: pink; */
+    display: grid;
+    grid-template-columns: 40% 10% 10% 10% 30%;
+    grid-template-rows: 10% 20% 20% 20% 30%;
+    min-height: 100svh;
+
+    .img1 {
+        background: rgb(105, 105, 105);
+        grid-column: 1 / 3;
+        grid-row: 2 / 5;
+        z-index: 10;
+
+    }
+
+    .img2 {
+        background: rgb(113, 113, 113);
+        grid-column: 2 / 5;
+        grid-row: 1 / 3;
+
+    }
+
+    .img3 {
+        background: rgb(127, 127, 127);
+        grid-column: 4 / 6;
+        grid-row: 2 / 4;
+
+    }
+}
+
+
+* SWIPER STYLING */ .swiper {
+
+    /* MOVE LEFT ARROW LEFT  */
+    .swiper-button-prev {
+        background-color: white;
+        padding: 50px 50px;
+        border-radius: 0 100% 100% 0;
+        scale: .5;
+        transform-origin: center center;
+        translate: -50% -25px;
+        color: red;
+    }
+
+    .swiper-button-next {
+        background-color: white;
+        padding: 50px 50px;
+        border-radius: 100% 0% 0% 100%;
+        scale: .5;
+        transform-origin: center center;
+        translate: 50% -25px;
+
+    }
+
+}
+
+
+
+/* FOR CODEPEN DEMO ONLY */
+/* RESPONSIVE IMAGE SUPPORT */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* SITE FOOTER */
@@ -596,7 +875,9 @@ section {
     /* ADD SOME GENERAL PADDING AROUND THE FOOTER */
     padding: var(--unit-small);
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
         color: var(--color-sitefooter-headings);
     }
 
@@ -639,7 +920,7 @@ section {
     /* GET RID OF THE UNDERLINE */
     text-decoration: none;
 
-    + .button {
+    +.button {
         margin-left: var(--unit-small);
     }
 
@@ -707,7 +988,7 @@ html {
 .observe-me {
     opacity: 0;
     transition: all 1s ease-out .5s;
-    
+
     &[data-viewstate="active"] {
         opacity: 1;
     }
@@ -716,21 +997,16 @@ html {
 
 .animate-from-left {
     translate: -20px 20px;
+
     &[data-viewstate="active"] {
         translate: 0 0;
     }
 }
+
 .animate-from-right {
     translate: 20px 20px;
+
     &[data-viewstate="active"] {
         translate: 0 0;
     }
 }
-
-
-
-
-
-
-
-

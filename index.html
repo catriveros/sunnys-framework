@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Base</title>
 
+    <!-- GOOGLE FONT -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- MAIN CSS FILE -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS LINK IN HEAD OF HTML (NOT IN BODY) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 
 </head>
 
 <body>
 
-    <header class="site-header on-top-of-hero">
+    <header class="site-header on-top-of-herox">
         <div class="site-logo">
             <a href="index.html">
                 <!-- <img src="img/placeholder-logo-500x500.png" alt="Site Base Logo" width="50" height="50"> -->
@@ -25,7 +37,7 @@
             </a>
             <h1 class="hide-visually"><a href="index.html">Simple Base</a></h1>
         </div>
-        <nav class="site-header-nav toggle-menu" data-menustate="closed">
+        <nav class="site-header-nav toggle-menux" data-menustate="closed">
             <button class="site-menu-button">
                 <span class="hide-visually">Menu</span>
                 <svg class="simple-navicon" width="24" height="21">
@@ -38,103 +50,251 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About</a></li>
-                
+
             </ul>
         </nav>
     </header>
 
+
+
+
+
+
     <main class="site-main">
 
-        <section class="hero">
-            <div class="container">
-
-                <div class="row swapped">
-                    <div class="one-half">
-                        <img src="img/placeholder-2000x1500.png" alt="Hero Image Placeholder" width="2000" height="1500">
-                    </div>
-                    <div class="one-half">
-                        <h1>Hero Headline</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non iste consectetur vel excepturi. Ipsa eveniet quo eum odit rerum? Neque!</p>
-                        <a href="#" class="button light">Light Button</a>
-                        <a href="#section1" class="button light">Go to Section 1</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="section1">
+        <section class="Hero">
             <div class="container">
 
                 <div class="row">
-                    <div class="one-half observe-me .animate-from-left">
-                        <img src="hero-1000x625.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="one-half observe-me animate-from-right">
-                        <h1>This is a Heading</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam at illo soluta ipsam aperiam explicabo eos aliquid doloribus repudiandae totam. <a href="#">This is a link</a></p>
-                        <a href="#" class="button">Default Button</a>
-                        <a href="#" class="button">Default Button</a>
+                    <div class="one-whole centered">
+                        <img src="img/hero-1000x625.jpg" alt="Placeholder Image">
+
                     </div>
                 </div>
+
+
 
             </div>
         </section>
 
-        <section id="section2">
+        <section class="intro">
             <div class="container">
 
-                <div class="row swapped observe-me animate-from-left">
-                    <div class="one-half">
-                        <img src="img/placeholder-2000x1500.gif" alt="Placeholder Image">
-                    </div>
-                    <div class="one-half">
-                        <h1>This is a Heading</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam at illo soluta ipsam aperiam explicabo eos aliquid doloribus repudiandae totam.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="section3">
-            <div class="container">
 
                 <div class="row">
-                    <div class="one-half centered">
-                        <img src="img/placeholder-2000x1500.svg" alt="Placeholder Image">
-                        <h1>This is a Heading</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam at illo soluta ipsam aperiam explicabo eos aliquid doloribus repudiandae totam.</p>
+                    <div class="three-fourths centered">
+                        <h1>Welcome</h1>
+                        <p>Food is one of our definitions of home and what we love. At Sunnie's we work closely
+                            with our local farmers, fishermen, ranchers, artisans, & purveyors to provide
+                            honest, ono
+                            food to our community.
+
                     </div>
+
+                </div>
+            </div>
+
+
+            <section class="Res">
+
+                <div class="container">
+
+
+                    <div class="reservation-form">
+                        <h2>Make a Reservation</h2>
+                        <p>Select your details and we'll try to get the best seats for you</p>
+
+                        <form>
+
+                            <div class="row">
+                                <div class="one-third">
+                                    <label for="date">Date:</label>
+                                    <input type="date" id="date" name="date">
+                                </div>
+
+                                <div class="one-third">
+                                    <label for="appt">Select a time:</label>
+                                    <input type="time" id="appt" name="appt">
+                                </div>
+
+                                <div class="one-third">
+                                    <label for="quantity">Number of Guests:</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" max="10">
+                                </div>
+                            </div>
+
+
+                            <input type="submit" value="book">
+
+                        </form>
+                    </div>
+
                 </div>
 
 
-            </div>
-        </section>
+            </section>
 
-        <section>
+            <section class="fresh">
+
+                <div class="container">
+
+
+                    <h1>Fresh & Seasonal</h1>
+
+                </div>
+
+                <div class="container">
+
+
+                    <div class="customgrid1">
+                        <div class="img1">image1</div>
+                        <div class="img2">image2</div>
+                        <div class="img3">image3</div>
+                    </div>
+
+
+                </div>
+
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <section class="mission">
+
+                <div class="container">
+
+
+                    <h1>Our Mission</h1>
+
+                </div>
+
+                <div class="container">
+
+
+                    <div class="customgrid1">
+                        <div class="img1">image1</div>
+                        <div class="img2">image2</div>
+                        <div class="img3">image3</div>
+                    </div>
+
+
+                </div>
+
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- CSS LINK IN HEAD OF HTML (NOT IN BODY) -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
             <div class="container">
 
-                <div class="centered-card-group">
+                <section class="hero">
+                    <!-- CAROUSEL IN BODY -->
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div>
 
-                    <div class="centered-card">
-                      <img src="http://fpoimg.com/200x200?text=orange&bg_color=f96&text_color=fff" alt="placeholder">
-                      <h2>Orange</h2>
-                      <p>#ff9966</p>
+                        </div>
+
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
                     </div>
-                  
-                    <div class="centered-card">
-                      <img src="http://fpoimg.com/200x200?text=red&bg_color=f00&text_color=fff" alt="placeholder">
-                      <h2>Red</h2>
-                      <p>#ff0000</p>
-                    </div>
-                  
-                  </div>
+                </section>
+
+                <!-- SWIPER JS IN BODY AT BOTTOM OF HTML -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
             </div>
 
 
-        </section>
+
+
+
+            <!-- <section id="section1">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="one-half observe-me .animate-from-left">
+                            <img src="img/placeholder-2000x1500.jpg" alt="Placeholder Image">
+                        </div>
+                        <div class="one-half observe-me animate-from-right">
+                            <h1>This is a Heading</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam at illo soluta
+                                ipsam
+                                aperiam explicabo eos aliquid doloribus repudiandae totam. <a href="#">This is a
+                                    link</a>
+                            </p>
+                            <a href="#" class="button">Default Button</a>
+                            <a href="#" class="button">Default Button</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </main>
 
@@ -146,7 +306,9 @@
 
                 <div class="three-fourths">
                     <h2>Simple Base</h2>
-                    <p>A simple set of starter HTML, CSS, & JS that is 100% customizable as a base-level front-end framework to create hand-crafted, custom static websites that are fast, flexible, and perfectly suited for 100% bespoke unique UI designs.</p>
+                    <p>A simple set of starter HTML, CSS, & JS that is 100% customizable as a base-level front-end
+                        framework to create hand-crafted, custom static websites that are fast, flexible, and perfectly
+                        suited for 100% bespoke unique UI designs.</p>
                 </div>
 
                 <div class="one-fourth">
