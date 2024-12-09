@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Base</title>
+
+    <!-- GOOGLE FONT -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- MAIN CSS FILE -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS LINK IN HEAD OF HTML (NOT IN BODY) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+</head>
+
+<body>
+
+    <header class="site-header on-top-of-herox">
+        <div class="site-logo">
+            <a href="index.html">
+                <!-- <img src="img/placeholder-logo-500x500.png" alt="Site Base Logo" width="50" height="50"> -->
+                <!-- <img src="img/placeholder-logo-500x500.svg" alt="Site Base Logo" width="50" height="50"> -->
+                <img src="img/sunnies logo_cursive2.png">
+            </a>
+            <h1 class="hide-visually"><a href="index.html">Simple Base</a></h1>
+        </div>
+        <nav class="site-header-nav toggle-menux" data-menustate="closed">
+            <button class="site-menu-button">
+                <span class="hide-visually">Menu</span>
+                <svg class="simple-navicon" width="24" height="21">
+                    <rect class="simple-navicon-top" x="0" y="2" height="3" width="24"></rect>
+                    <rect class="simple-navicon-middle" x="0" y="9" height="3" width="24"></rect>
+                    <rect class="simple-navicon-bottom" x="0" y="16" height="3" width="24"></rect>
+                </svg>
+            </button>
+            <ul class="site-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <main class="site-main">
+
+        <section class="hero">
+
+            <img src="img/hero_v2_1800x850.jpg" alt="Hero">
+
+
+
+
+
+
+        </section>
+
+        <section class="intro">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="two-thirds centered">
+                        <h1>Welcome</h1>
+                        <p>Food is one of our definitions of home and what we love. At Sunnie's we work closely
+                            with our local farmers, fishermen, ranchers, artisans, & purveyors to provide
+                            honest, ono
+                            food to our&nbsp;community.
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <section class="Res">
+
+                <div class="container">
+
+
+                    <div class="reservation-form">
+                        <h2>Make a Reservation</h2>
+                        <p>Select your details and we'll try to get the best seats for you</p>
+
+                        <form>
+
+                            <div class="row">
+                                <div class="one-third">
+                                    <label for="date">Date:</label>
+                                    <input type="date" id="date" name="date">
+                                </div>
+
+                                <div class="one-third">
+                                    <label for="appt">Select a time:</label>
+                                    <input type="time" id="appt" name="appt">
+                                </div>
+
+                                <div class="one-third">
+                                    <label for="quantity">Number of Guests:</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" max="10">
+                                </div>
+                            </div>
+
+
+                            <input type="submit" value="book">
+
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+            <section class="fresh">
+
+                <div class="container">
+
+
+                    <h1>Fresh & Seasonal</h1>
+
+                </div>
+
+                <div class="container">
+
+
+                    <div class="customgrid1">
+
+
+                        <div class="img1">
+                            <img src="img/IMG-1_GreenShirt.jpg">
+                        </div>
+
+
+                        <div class="img2">
+                            <img src="img/IMG2_dragonfruit.jpg">
+
+
+                        </div>
+
+                        <div class="img3">
+                            <img src="img/IMG3_fryfish.jpg">
+
+
+
+
+                        </div>
+
+
+
+
+                        <div class="blurb">
+                            <p>The foundation of Sunnie's was built around family get togethers,
+                                celebrating the
+                                diversity of natural ingredients and a cooking style that embodies Oahu cuisine.</p>
+
+                            <a href="#" class="button">Menu</a>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            </section>
+
+
+
+            <section class="mission">
+
+                <div class="container">
+
+
+                    <h1>Our Mission</h1>
+
+                </div>
+
+                <div class="container">
+
+
+                    <div class="customgrid1">
+                        <div class="img1">
+                            <img src="img/car_driving_IMG1.jpg">
+                        </div>
+
+
+                        <div class="img2">
+                            <img src="img/calamasi_IMG2.jpg">
+
+
+                        </div>
+
+                        <div class="img3">
+                            <img src="img/chef_chopping_IMG3.jpg">
+                            <p>The foundation of Sunnie's was built around family get togethers,
+                                celebrating the
+                                diversity of natural ingredients and a cooking style that embodies Oahu cuisine.</p>
+
+                            <a href="#" class="button">Menu</a>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- CSS LINK IN HEAD OF HTML (NOT IN BODY) -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+            <div class="container">
+
+                <section class="carousel">
+                    <p>The Latest</p>
+                    <p>follow us @sunnie's oahu</p>
+                    <!-- CAROUSEL IN BODY -->
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="img/IMG1_carousel_drink.jpg" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/IMG2_carousel.jpg" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/IMG3_carousel.jpg" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/IMG4_carousel.jpg" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/IMG5_carousel_shiso.jpg" alt="placeholder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/IMG6_carousel_hand.jpg" alt="placeholder">
+                            </div>
+                            <!-- <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div> -->
+                            <!-- <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div> -->
+                            <!-- <div class="swiper-slide">
+                                <img src="https://fpoimg.com/270x270?text=Preview" alt="placeholder">
+                            </div> -->
+
+                        </div>
+
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                </section>
+
+                <!-- SWIPER JS IN BODY AT BOTTOM OF HTML -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+            </div>
+
+
+
+
+
+            <!-- <section id="section1">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="one-half observe-me .animate-from-left">
+                            <img src="img/placeholder-2000x1500.jpg" alt="Placeholder Image">
+                        </div>
+                        <div class="one-half observe-me animate-from-right">
+                            <h1>This is a Heading</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam at illo soluta
+                                ipsam
+                                aperiam explicabo eos aliquid doloribus repudiandae totam. <a href="#">This is a
+                                    link</a>
+                            </p>
+                            <a href="#" class="button">Default Button</a>
+                            <a href="#" class="button">Default Button</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="one-fourth">
+                    <img src="img/sunnies logo_cursive2.png">
+                </div>
+
+
+                <div class="one-fourth">
+                    <h2>Contact Us</h2>
+                    <p>A simple set of starter HTML</p>
+                </div>
+
+                <div class="one-fourth">
+                    <h2>Address</h2>
+                    <p>A simple set of starter HTML</p>
+                </div>
+
+                <div class="one-fourth">
+                    <h2>Hours</h2>
+                    <p>A simple set of starter HTML</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+    <!-- MAIN JS FILE -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
